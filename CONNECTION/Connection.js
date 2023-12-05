@@ -4,7 +4,7 @@ import { LOGINPAGE } from "../PAGES/LOGINPAGE/LoginPage.js";
 
 const CONNECTION=(DIV)=>{
 
-    LOGINPAGE(DIV);
+    HOMEPAGE(DIV);
 
 }
 

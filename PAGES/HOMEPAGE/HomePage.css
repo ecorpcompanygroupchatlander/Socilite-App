@@ -1,0 +1,14 @@
+.HomeDiv{
+    position: absolute;
+    width: 100%;
+    height: auto;
+    top: 0;
+    bottom:0;
+    background: #00000080;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.HomeFooter{
+    background: #00000080;
+}

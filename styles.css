@@ -1,0 +1,103 @@
+@import url('./CONNECTION/Connection.css');
+*{
+    padding: 0;
+    margin: 0;
+    transition: 1s;
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    font-family: sans-serif;
+    list-style: none;
+}
+
+
+body{
+    position: fixed;
+    background: teal;
+    display: block;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+
+}
+
+div{
+    position: fixed;
+    display: block;
+    overflow: hidden;
+    background:transparent;
+    width: 100%;
+    height: 100%;
+}
+
+input{
+    position: relative;
+    width: 95%;
+    min-height: 16px;
+    height: 32px;
+    max-height: 32px;
+    border-radius: 5px;
+    left: 2%;
+    margin-top: 1rem;
+    border: none;
+    background: #00000080;
+    color: white;
+}
+
+button{
+    position: relative;
+    width: 95%;
+    min-height: 16px;
+    height: 40px;
+    border-radius: 5px;
+    left: 2%;
+    margin-top: 1rem;
+    border: none;
+    background: #00000080;
+    color: white;
+}
+
+h1,h2,h3,h4,h5,h6{
+    position: relative;
+    text-align: center;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+img{
+    position: relative;
+    width: 20px;
+    height: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+header{
+    position: absolute;
+    background: transparent;
+    width: 95%;
+    left: 2%;
+    height: 40px;
+    margin-top: 0.5rem;
+    border-radius: 50px;
+    display: inline-flex;
+    top: 0;
+}
+
+footer{
+    position: absolute;
+    background: transparent;
+    width: 95%;
+    left: 2%;
+    height: 40px;
+    margin-bottom: 0.5rem;
+    border-radius: 50px;
+    display: inline-flex;
+    bottom: 0;
+}

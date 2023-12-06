@@ -1,5 +1,4 @@
-
-import { CREATEPOSTPAGE } from "../CREATEPOSTPAGE/CreatePostpage.js";
+import { CREATEPOSTPAGE } from "../CREATEPOSTPAGE/CreatePostPage.js";
 import { USERACCOUNTPAGE } from "../USERACCOUNTPAGE/UserAccountPage.js";
 
 const HOMEPAGE=(DIV)=>{
@@ -71,7 +70,7 @@ const HOMEPAGE=(DIV)=>{
 
         CreatePostPage.addEventListener('click',()=>{
 
-            CREATEPOSTPAGE(DIV)
+            CREATEPOSTPAGE(DIV);
 
         })
 

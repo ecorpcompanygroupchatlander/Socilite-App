@@ -1,4 +1,5 @@
 import { HOMEPAGE } from "../HOMEPAGE/HomePage.js";
+import { CREATEUSERPOST } from "./CreateUserPost.js";
 
 const CREATEPOSTPAGE=(DIV)=>{
 
@@ -14,7 +15,7 @@ const CREATEPOSTPAGE=(DIV)=>{
 
     </header>
 
-    <textarea name="" id="" cols="30" placeholder='Write Your Story' rows="10"></textarea>
+    <textarea name="PostStory" id="PostStory" cols="30" placeholder='Write Your Story' rows="10"></textarea>
 
     <button class='PostButton'>
 
@@ -24,7 +25,7 @@ const CREATEPOSTPAGE=(DIV)=>{
     
     </button>
 
-    <button class='PostButton'>
+    <button id='CreatePostButton' class='PostButton'>
 
         <h1>Create Post</h1>
 
@@ -39,6 +40,14 @@ const CREATEPOSTPAGE=(DIV)=>{
     CreatePostbackIcon.addEventListener('click',()=>{
 
         HOMEPAGE(DIV);
+
+    })
+
+    const CreatePostButton=document.querySelector('#CreatePostButton');
+
+    CreatePostButton.addEventListener('click',()=>{
+
+        CREATEUSERPOST(DIV);
 
     })
 

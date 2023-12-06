@@ -22,9 +22,9 @@
 .AppHolders{
     position: absolute;
     margin-top: 2rem;
-    width: 15%;
+    width: 50px;
     right: 1%;
-    height: 70%;
+    height: 30%;
     bottom: 1%;
     background: blue;
     display: inline-table;
@@ -34,7 +34,7 @@
 .PosterprofilePicture{
     position: absolute;
     right: 1%;
-    margin-top: 3rem;
+    margin-top: 1rem;
     width: 50px;
     height: 50px;
     border-radius: 50px;
@@ -43,11 +43,9 @@
 }
 
 .FunctionButtons{
-    width: 30px;
-    height: 30px;
-    padding: 5%;
     margin-top: 2rem;
-    margin-left: 0.5rem;
+    margin-bottom: 2rem;
+    margin-left: 0.8rem;
     margin-right: 0.5rem;
     display: inline-flex;
 }

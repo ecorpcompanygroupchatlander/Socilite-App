@@ -1,3 +1,5 @@
+import { USERACCOUNTPAGE } from "../USERACCOUNTPAGE/UserAccountPage.js";
+
 const HOMEPAGE=(DIV)=>{
 
     DIV.innerHTML=`
@@ -16,14 +18,64 @@ const HOMEPAGE=(DIV)=>{
 
         <img src='./IMAGES/Icons/chat.png'/>
 
-        <img src='./IMAGES/Icons/post.png'/>
+        <img id='CreatePost' src='./IMAGES/Icons/post.png'/>
 
-        <img src='./IMAGES/Icons/profile.png'/>
+        <img id='ProfileIcon' src='./IMAGES/Icons/profile.png'/>
     
     </footer>
+
+    <div class='HiddenDiv'></div>
     
     `;
 
+    const ProfileIcon=document.querySelector('#ProfileIcon');
+
+    const HiddenDiv=document.querySelector('.HiddenDiv');
+
+    ProfileIcon.addEventListener("click",()=>{
+
+        USERACCOUNTPAGE(DIV);
+
+    })
+
+    const CreatePost=document.querySelector('#CreatePost');
+
+    CreatePost.addEventListener('click',()=>{
+        
+        HiddenDiv.style.display='inline-flex';
+        HiddenDiv.style.height='100px';
+
+        HiddenDiv.innerHTML=`
+
+        <button class='PostButtons'>Go Live</button>
+
+        <button class='PostButtons'>Create Post</button>
+
+        <button id='ClosePost' class='PostButtons'>Cancel</button>
+        
+        `;
+
+        const ClosePost=document.querySelector('#ClosePost');
+
+        ClosePost.addEventListener('click',()=>{
+
+            HiddenDiv.style.display='none';
+
+            HiddenDiv.style.height='0px';
+
+        })
+
+
+    })
+
+    
+    
+    
+
+
 }
+
+
+
 
 export{HOMEPAGE}

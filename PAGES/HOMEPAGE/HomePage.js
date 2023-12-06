@@ -82,6 +82,30 @@ const HOMEPAGE=(DIV)=>{
     //APP START FUNCTIONS
     MYFEED(DIV)
 
+    const Main=document.querySelector('.HomeDiv');
+
+    const RoundFooter=document.querySelector('.HomeFooter');
+
+    //FOOTER
+    let prevScrollPos = Main.scrollTop;
+
+    Main.addEventListener('scroll', () => {
+
+        const currentScrollPos = Main.scrollTop;
+
+        if (currentScrollPos > prevScrollPos) {
+            // Scrolling down, hide the footer
+            RoundFooter.style.display = 'none';
+        } else {
+            // Scrolling up, show the footer
+            RoundFooter.style.display = 'inline-flex';
+        }
+
+        prevScrollPos = currentScrollPos;
+
+    });
+
+    
 
 }
 

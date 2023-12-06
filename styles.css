@@ -102,15 +102,3 @@ footer{
     bottom: 0;
 }
 
-textarea{
-    position: relative;
-    width: 95%;
-    height: auto;
-    text-align: justify;
-    border-radius: 5px;
-    left: 2%;
-    margin-top: 1rem;
-    border: none;
-    background: #00000080;
-    color: white;
-}

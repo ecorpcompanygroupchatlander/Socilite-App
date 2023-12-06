@@ -5,13 +5,13 @@ const CREATEPOSTPAGE=(DIV)=>{
 
     DIV.innerHTML=`
 
-    <img class='PostProfilePhoto' src='./IMAGES/logos/socie 512.jpg'/>
+    <img class='PostProfilePhoto' src='../IMAGES/logos/socie 512.jpg'/>
 
     <header>
 
-        <img id='CreatePostbackIcon' class='BackIcon' src='./IMAGES/Icons/back.png'/>
+        <img id='CreatePostbackIcon' class='BackIcon' src='../IMAGES/Icons/back.png'/>
 
-        <img  class='SettingsIcon' src='./IMAGES/Icons/setting.png'/>
+        <img  class='SettingsIcon' src='../IMAGES/Icons/setting.png'/>
 
     </header>
 
@@ -21,7 +21,7 @@ const CREATEPOSTPAGE=(DIV)=>{
 
         <h1>Select Image</h1>
 
-        <img src='./IMAGES/Icons/grid.png '/>
+        <img src='../IMAGES/Icons/grid.png '/>
     
     </button>
 
@@ -29,7 +29,7 @@ const CREATEPOSTPAGE=(DIV)=>{
 
         <h1>Create Post</h1>
 
-        <img src='./IMAGES/Icons/upload.png '/>
+        <img src='../IMAGES/Icons/upload.png '/>
 
     </button>
     

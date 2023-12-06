@@ -18,11 +18,11 @@ const HOMEPAGE=(DIV)=>{
     
     <footer class='HomeFooter'>
 
-        <img src='./IMAGES/Icons/chat.png'/>
+        <img src='../IMAGES/Icons/chat.png'/>
 
-        <img id='CreatePost' src='./IMAGES/Icons/post.png'/>
+        <img id='CreatePost' src='../IMAGES/Icons/post.png'/>
 
-        <img id='ProfileIcon' src='./IMAGES/Icons/profile.png'/>
+        <img id='ProfileIcon' src='../IMAGES/Icons/profile.png'/>
     
     </footer>
 

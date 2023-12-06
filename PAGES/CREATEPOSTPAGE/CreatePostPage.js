@@ -11,7 +11,7 @@ const CREATEPOSTPAGE=(DIV)=>{
 
         <img id='CreatePostbackIcon' class='BackIcon' src='./IMAGES/Icons/back.png'/>
 
-        <img  class='SettingsIcon' src='./IMAGES/Icons/setting.png'/>
+        <img  class='SettingsIcon' src='./IMAGES/Icons/location.png'/>
 
     </header>
 

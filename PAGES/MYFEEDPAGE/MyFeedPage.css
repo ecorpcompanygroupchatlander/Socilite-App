@@ -27,8 +27,8 @@
     height: 70%;
     bottom: 1%;
     background: blue;
-    display: block;
-    border-radius: 10px;
+    display: inline-table;
+    border-radius: 50px;
 }
 
 .PosterprofilePicture{
@@ -40,4 +40,14 @@
     border-radius: 50px;
     mix-blend-mode: darken;
     border: 1px solid gray;
+}
+
+.FunctionButtons{
+    width: 30px;
+    height: 30px;
+    padding: 5%;
+    margin-top: 2rem;
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+    display: inline-flex;
 }

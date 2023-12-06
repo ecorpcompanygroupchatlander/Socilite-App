@@ -19,7 +19,15 @@ const MYFEED=(DIV)=>{
             <img class='PosterprofilePicture' src='./IMAGES/logos/socie 512.jpg'/>
             <img  class='POSTEDIMAGE' src='${POSTIMAGEPATH+element.MovieImage}'/>
             <div class='AppHolders' >
-            
+                
+                <img class='FunctionButtons' src='./IMAGES/Icons/heart.png'/>
+               
+                <img class='FunctionButtons' src='./IMAGES/Icons/comment.png'/>
+                
+                <img class='FunctionButtons'  src='./IMAGES/Icons/save.png'/>
+                
+                <img class='FunctionButtons' src='./IMAGES/Icons/share.png'/>  
+
             </div>
             `;
             HomeDiv.append(POSTHOLDERDIV);

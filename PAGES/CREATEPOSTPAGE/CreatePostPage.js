@@ -20,7 +20,7 @@ const CREATEPOSTPAGE=(DIV)=>{
 
         <h1>Select Image</h1>
 
-        <img src='../../IMAGES/Icons/grid.png '/>
+        <img src='../IMAGES/Icons/grid.png '/>
     
     </button>
 
@@ -28,7 +28,7 @@ const CREATEPOSTPAGE=(DIV)=>{
 
         <h1>Create Post</h1>
 
-        <img src='../../IMAGES/Icons/upload.png '/>
+        <img src='../IMAGES/Icons/upload.png '/>
 
     </button>
     

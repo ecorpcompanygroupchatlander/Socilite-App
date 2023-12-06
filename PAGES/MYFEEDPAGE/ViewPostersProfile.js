@@ -8,6 +8,8 @@ const VIEWPOSTERPROFILE=(DIV)=>{
 
     HiddenDiv.innerHTML=`
 
+    <img class='PosterProfilePhoto' src='./IMAGES/logos/socie 512.jpg'/>
+
     <header>
 
         <img id='ProfileAccountBackIcon' class='BackIcon' src='./IMAGES/Icons/close.png'/>
@@ -15,6 +17,21 @@ const VIEWPOSTERPROFILE=(DIV)=>{
         <img id='UserAccountBackIcon' class='SettingsIcon' src='./IMAGES/Icons/setting.png'/>
 
     </header>
+
+    <div class='ContactHolder'>
+
+        <button class='PostButtons'>Call</button>
+
+        <button class='PostButtons'>Message</button>
+
+        <button class='PostButtons'>Link Up</button>
+
+        <div class='UsersInformation'></div>
+
+    
+    </div>
+
+    
     
     `;
 
@@ -25,6 +42,7 @@ const VIEWPOSTERPROFILE=(DIV)=>{
         HiddenDiv.style.display='none';
         HiddenDiv.style.height='0%';
 
+        
     })
 
 }

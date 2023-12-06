@@ -21,6 +21,7 @@
     bottom: 0;
     display:none;
     border-radius: 20px 20px 0px 0px;
+    overflow: hidden;
 }
 
 .PostButtons{

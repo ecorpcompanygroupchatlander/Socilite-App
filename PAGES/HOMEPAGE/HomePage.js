@@ -1,4 +1,5 @@
 import { CREATEPOSTPAGE } from "../CREATEPOSTPAGE/CreatePostPage.js";
+import { MYFEED } from "../MYFEEDPAGE/MyFeedPage.js";
 import { USERACCOUNTPAGE } from "../USERACCOUNTPAGE/UserAccountPage.js";
 
 const HOMEPAGE=(DIV)=>{
@@ -78,8 +79,8 @@ const HOMEPAGE=(DIV)=>{
     })
 
     
-    
-    
+    //APP START FUNCTIONS
+    MYFEED(DIV)
 
 
 }

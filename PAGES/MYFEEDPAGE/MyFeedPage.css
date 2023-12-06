@@ -1,0 +1,25 @@
+.POSTHOLDERDIV{
+    position: relative;
+    width: 98%;
+    left: 1%;
+    border-radius: 10px;
+    height: 100%;
+    background: transparent;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.POSTEDIMAGE{
+    position: absolute;
+    width: 100%;
+    height: 90%;
+}
+
+.AppHolders{
+    position: absolute;
+    width: 100%;
+    height: 10%;
+    bottom: 0;
+    background: blue;
+    display: inline-flex;
+}

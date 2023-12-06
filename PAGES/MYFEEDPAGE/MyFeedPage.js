@@ -16,6 +16,7 @@ const MYFEED=(DIV)=>{
             const POSTHOLDERDIV=document.createElement('div');
             POSTHOLDERDIV.classList.add('POSTHOLDERDIV');
             POSTHOLDERDIV.innerHTML=`
+            <img class='PosterprofilePicture' src='./IMAGES/logos/socie 512.jpg'/>
             <img  class='POSTEDIMAGE' src='${POSTIMAGEPATH+element.MovieImage}'/>
             <div class='AppHolders' >
             

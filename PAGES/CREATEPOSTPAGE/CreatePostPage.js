@@ -5,7 +5,7 @@ const CREATEPOSTPAGE=(DIV)=>{
 
     DIV.innerHTML=`
 
-    <img class='PostProfilePhoto' src='./IMAGES/logos/socie 512.jpg'/>
+    <img class='ProfilePhoto' src='./IMAGES/logos/socie 512.jpg'/>
 
     <header>
 
@@ -15,23 +15,29 @@ const CREATEPOSTPAGE=(DIV)=>{
 
     </header>
 
-    <textarea name="PostStory" id="PostStory" cols="30" placeholder='Write Your Story' rows="10"></textarea>
+    <div class='TextPostHolder'>
 
-    <button class='PostButton'>
+        <textarea name="PostStory" id="PostStory" cols="30" placeholder='Write Your Story' rows="10"></textarea>
 
-        <h1>Select Image</h1>
+        <button class='PostButton'>
 
-        <img src='./IMAGES/Icons/grid.png '/>
+            <h1>Select Image</h1>
+
+            <img src='./IMAGES/Icons/grid.png '/>
+        
+        </button>
+
+        <button id='CreatePostButton' class='PostButton'>
+
+            <h1>Create Post</h1>
+
+            <img src='./IMAGES/Icons/upload.png '/>
+
+        </button>
     
-    </button>
+    </div>
 
-    <button id='CreatePostButton' class='PostButton'>
 
-        <h1>Create Post</h1>
-
-        <img src='./IMAGES/Icons/upload.png '/>
-
-    </button>
     
     `;
 

@@ -8,9 +8,9 @@ const USERACCOUNTPAGE=(DIV)=>{
 
     <header>
 
-        <img id='UserAccountBackIcon' class='BackIcon' src='../IMAGES/Icons/back.png'/>
+        <img id='UserAccountBackIcon' class='BackIcon' src='./IMAGES/Icons/back.png'/>
 
-        <img id='UserAccountBackIcon' class='SettingsIcon' src='../IMAGES/Icons/setting.png'/>
+        <img id='UserAccountBackIcon' class='SettingsIcon' src='./IMAGES/Icons/setting.png'/>
 
     </header>
 

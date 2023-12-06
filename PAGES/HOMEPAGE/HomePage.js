@@ -1,3 +1,5 @@
+
+import { CREATEPOSTPAGE } from "../CREATEPOSTPAGE/CreatePostpage.js";
 import { USERACCOUNTPAGE } from "../USERACCOUNTPAGE/UserAccountPage.js";
 
 const HOMEPAGE=(DIV)=>{
@@ -49,7 +51,7 @@ const HOMEPAGE=(DIV)=>{
 
         <button class='PostButtons'>Go Live</button>
 
-        <button class='PostButtons'>Create Post</button>
+        <button id='CreatePostPage' class='PostButtons'>Create Post</button>
 
         <button id='ClosePost' class='PostButtons'>Cancel</button>
         
@@ -62,6 +64,14 @@ const HOMEPAGE=(DIV)=>{
             HiddenDiv.style.display='none';
 
             HiddenDiv.style.height='0px';
+
+        })
+
+        const CreatePostPage=document.querySelector('#CreatePostPage');
+
+        CreatePostPage.addEventListener('click',()=>{
+
+            CREATEPOSTPAGE(DIV)
 
         })
 

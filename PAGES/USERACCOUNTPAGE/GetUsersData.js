@@ -1,4 +1,5 @@
 import { USERDATA } from "../../APIS/SociliteApp.js";
+import { LOGINPAGE } from "../LOGINPAGE/LoginPage.js";
 
 const GETUSERSRDATA=(DIV)=>{
 
@@ -6,26 +7,27 @@ const GETUSERSRDATA=(DIV)=>{
 
     const ProfileUserName=document.querySelector('.ProfileUserName');
 
-    const MyData={
-        "ID":localStorage.getItem('User'),
-        "type":"Advance"
-        
-    }
-
-    fetch(USERDATA,{
-        method:'POST',
-        mode:'cors',
-        body:JSON.stringify(MyData)
-    })
+    fetch(USERDATA)
 
     .then(res => res.json())
 
-    .then((result) => {
+    .then((data) => {
 
-        const MYDETAILS=result.userData;
+        const user = data.find(user => user.SecretCode === localStorage.getItem('User'));
+
+        if (user) {
+            
+            ProfileUserName.innerHTML=user.UserName;
+
+        } else {
+            
+            localStorage.removeItem('User');
+
+            LOGINPAGE(DIV)
+
+        }
+        
     
-        ProfileUserName.innerHTML=MYDETAILS.UserName;
-
     }).catch((err) => {
         console.log(err)
     });

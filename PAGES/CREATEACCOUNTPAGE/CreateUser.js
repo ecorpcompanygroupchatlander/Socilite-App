@@ -1,4 +1,4 @@
-import { CREATEUSERAPI } from "../../APIS/SociliteApp.js";
+import { CREATEUSERAPI, LOGINAPI } from "../../APIS/SociliteApp.js";
 import { HOMEPAGE } from "../HOMEPAGE/HomePage.js";
 
 function generateRandomString(length) {
@@ -11,114 +11,152 @@ function generateRandomString(length) {
     return result;
 }
 
-const CREATEUSER=(DIV)=>{
+const hashPassword = async (password) => {
+    const encoder = new TextEncoder();
+    const data = encoder.encode(password);
 
-    const MESSAGE=document.querySelector('.CreaeteMessage');
-    const USERNAME=document.querySelector('#CreateUserName');
-    const EMAIL=document.querySelector('#CreateEmail');
-    const PASSWORD=document.querySelector('#CreatePassword');
-    const DATE=document.querySelector('#CreateDate');
-    const LOCATION=document.querySelector('#CreateCountry');
-    const TELEPHONE=document.querySelector('#CreateTelephone');
-    const CREATEACCOUNTBUTTON=document.querySelector('#CreateAccountButton');
+    try {
+        const buffer = await crypto.subtle.digest('SHA-256', data);
+        const hashedArray = Array.from(new Uint8Array(buffer));
+        const hashedPassword = hashedArray.map(byte => byte.toString(16).padStart(2, '0')).join('');
+
+        return hashedPassword;
+    } catch (error) {
+        console.error('Error hashing password:', error);
+        throw error;
+    }
+};
+
+const CREATEUSER = (DIV) => {
+    const MESSAGE = document.querySelector('.CreaeteMessage');
+    const USERNAME = document.querySelector('#CreateUserName');
+    const EMAIL = document.querySelector('#CreateEmail');
+    const PASSWORD = document.querySelector('#CreatePassword');
+    const DATE = document.querySelector('#CreateDate');
+    const LOCATION = document.querySelector('#CreateCountry');
+    const TELEPHONE = document.querySelector('#CreateTelephone');
+    const CREATEACCOUNTBUTTON = document.querySelector('#CreateAccountButton');
 
     const firstLetter = EMAIL.value.charAt(0).toUpperCase();
-    
-    const birthYear = DATE.value.slice(-4); // Extract last 4 characters for the year
-                
-        // Calculate the length of the random string to make the total length 11
-    const randomStringLength = 11 - 1 - 4; // 1 character for the first letter of email, 4 characters for the birth year
-                
-        // Generate the random string with the calculated length
+
+    const birthYear = DATE.value.slice(-4);
+
+    const randomStringLength = 11 - 1 - 4;
     const randomString = generateRandomString(randomStringLength);
-        
-        // Ensure the total length of the secret code is 11
+
     const secretCode = `${firstLetter}${birthYear}${randomString}`.slice(0, 11);
-        
 
     if (USERNAME.value && EMAIL.value && PASSWORD.value && DATE.value && LOCATION.value && TELEPHONE.value) {
         
-        const USERDATA={
-            "UserId":secretCode,
-            "UserName":USERNAME.value,
-            "Email":EMAIL.value,
-            "Password":PASSWORD.value,
-            "D.O.B":DATE.value,
-            "Telephone":TELEPHONE.value,
-            "Location":LOCATION.value,
-            "CreatedOn":new Date(),
-            "type":"Advance",
+         CREATEACCOUNTBUTTON.innerHTML = `<img class='LoadingIcon' src='./IMAGES/Icons/loading.png'/>`;
+        
+         fetch(LOGINAPI)
 
-        }
+        .then(res => res.json())
 
-        CREATEACCOUNTBUTTON.innerHTML=`
+        .then((data) => {
 
-            <img class='LoadingIcon' src='./IMAGES/Icons/loading.png'/>
+            const user = data.find(user => user.Email === EMAIL.value);
 
-        `;
+            if (user) {
 
-        fetch(CREATEUSERAPI,{
-            method:'Post',
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            body:JSON.stringify(USERDATA)
-        })
-
-        .then(res =>res.json())
-
-        .then((result) => {
-            
-            if (result.status==='success') {
-                
-                localStorage.setItem('User',result.userId)
-
-                HOMEPAGE(DIV);
-
-            } else {
-                
-                MESSAGE.innerHTML=result.message;
+                MESSAGE.innerHTML = 'User Email Already Taken';
 
                 setTimeout(() => {
-                
-                    MESSAGE.innerHTML=``;
 
-                    CREATEACCOUNTBUTTON.innerHTML=`
+                    MESSAGE.innerHTML = ``;
 
-                    Create Account
-                    
-                    `;
-                    
+                    CREATEACCOUNTBUTTON.innerHTML =`Create Account`;
+
                 }, 2000);
 
-            }
-
-        }).catch((err) => {
-            
-            MESSAGE.innerHTML=result.message;
-
-            setTimeout(() => {
-            
-                MESSAGE.innerHTML=``;
                 
-            }, 2000);
-        });
+            } else {
+               
+                hashPassword(PASSWORD.value)
 
+                .then((hashedPassword) => {
 
+                const USERDATA = {
+                    "UserName": USERNAME.value,
+                    "Email": EMAIL.value,
+                    "Password": hashedPassword,
+                    "Password2": hashedPassword,
+                    "Date": DATE.value,
+                    "Telephone": TELEPHONE.value,
+                    "Location": LOCATION.value,
+                    "CreatedOn": new Date(),
+                    "SecretCode":secretCode
+                };
+
+                fetch(CREATEUSERAPI, {
+                    method: 'Post',
+                    mode:'no-cors',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify(USERDATA),
+                })
+
+                .then(res => res.text())
+
+                .then((result) => {
+
+                    fetch(LOGINAPI)
+
+                    .then(res=>res.json())
+
+                    .then(data=>{
+
+                        const user = data.find(user => user.Email === EMAIL.value);
+
+                        if (user) {
+                            
+                            localStorage.setItem('User',user.SecretCode);
+
+                            HOMEPAGE(DIV)
+
+                        } 
+
+                    })
+
+                    .catch(err=>console.log(err))
+                    
+                })
+
+                .catch((err) => {
+
+                    console.log(err)
+
+                    MESSAGE.innerHTML = 'Something Wrong';
+
+                    setTimeout(() => {
+
+                        MESSAGE.innerHTML = ``;
+
+                        CREATEACCOUNTBUTTON.innerHTML =`Create Account`;
+
+                    }, 2000);
+
+                });
+
+            })
+            .catch((err) => {
+                console.error(err);
+            });
+            }
+        
+        
+        })
+
+        
     } else {
-       
-        MESSAGE.innerHTML=`Fill all Parts`;
+        MESSAGE.innerHTML = `Fill all Parts`;
 
         setTimeout(() => {
-        
-            MESSAGE.innerHTML=``;
-            
+            MESSAGE.innerHTML = ``;
         }, 2000);
-        
     }
+};
 
-
-
-}
-
-export{CREATEUSER}
+export { CREATEUSER };

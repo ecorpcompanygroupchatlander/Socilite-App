@@ -71,3 +71,12 @@
     border-radius: 20px;
     left: 2%;
 }
+
+.UpdateProfile{
+    position: absolute;
+    bottom: 3%;
+    right: 2%;
+    background: #00000080;
+    border-radius: 20px;
+    padding: 2%;
+}

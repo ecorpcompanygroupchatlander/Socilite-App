@@ -5,9 +5,15 @@ const USERACCOUNTPAGE=(DIV)=>{
 
     DIV.innerHTML=`
 
-    <img class='ProfilePicture' src='./IMAGES/logos/socie logo.jpg'/>
+    <div class='ProfileImageHolder'>
 
-    <div class='UserData'></div>
+        <img class='CoverPhoto' src='./IMAGES/logos/socie 512.jpg'/>
+
+        <img class='ProfilePhoto' src='./IMAGES/logos/socie 512.png'/>
+
+        <h1 class='ProfileUserName'></h1>
+    
+    </div>
 
     <header>
 

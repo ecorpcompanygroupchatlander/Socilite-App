@@ -1,4 +1,5 @@
 import { LOGINPAGE } from "../LOGINPAGE/LoginPage.js";
+import { CREATEUSER } from "./CreateUser.js";
 
 const CREATEACCOUNTPAGE=(DIV)=>{
 
@@ -6,7 +7,7 @@ const CREATEACCOUNTPAGE=(DIV)=>{
 
         <h1 class='AppName' >Socilite</h1>
 
-        <h1 class='LogInMessage'></h1>
+        <h1 class='CreaeteMessage'></h1>
 
         <input type="text"  placeholder="Enter User Name" id="CreateUserName">
 
@@ -26,6 +27,14 @@ const CREATEACCOUNTPAGE=(DIV)=>{
 
     `;
 
+    const CreateDate=document.querySelector('#CreateDate');
+
+    CreateDate.addEventListener('click',()=>{
+
+        CreateDate.type='date';
+
+    })
+
     const LoginAccountButton=document.querySelector('#LoginAccountButton');
 
     LoginAccountButton.addEventListener('click',()=>{
@@ -33,6 +42,15 @@ const CREATEACCOUNTPAGE=(DIV)=>{
         LOGINPAGE(DIV);
 
     })
+
+    const CreateAccountButton=document.querySelector('#CreateAccountButton');
+
+    CreateAccountButton.addEventListener('click',()=>{
+
+        CREATEUSER(DIV);
+
+    })
+
 
 
 }

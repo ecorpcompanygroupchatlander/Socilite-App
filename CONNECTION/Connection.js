@@ -1,10 +1,9 @@
-import { HOMEPAGE } from "../PAGES/HOMEPAGE/HomePage.js";
-import { LOGINPAGE } from "../PAGES/LOGINPAGE/LoginPage.js";
+import { AUTOLOGIN } from "../PAGES/AUTOLOGIN/AutoLogin.js";
 
 
 const CONNECTION=(DIV)=>{
 
-    HOMEPAGE(DIV);
+    AUTOLOGIN(DIV);
 
 }
 

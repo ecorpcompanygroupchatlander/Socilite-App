@@ -2,5 +2,8 @@ const MYFEEDAPI=`https://script.googleusercontent.com/macros/echo?user_content_k
 
 const POSTIMAGEPATH=`https://e-corpcompanygroupmovieslander.github.io/MovieLander/MoviesPosters/`;
 
+const LOGINAPI=`https://chaton.bio/SociLite/LoginUser.php`;
 
-export{MYFEEDAPI,POSTIMAGEPATH}
+const CREATEUSERAPI=`https://chaton.bio/SociLite/CreateUser.php`;
+
+export{MYFEEDAPI,POSTIMAGEPATH,LOGINAPI,CREATEUSERAPI}

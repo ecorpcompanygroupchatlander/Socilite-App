@@ -41,7 +41,7 @@ const GETUSERSRDATA=(DIV)=>{
 
         <div class='UserDetailsDiv'>
         
-            <h1 class='MyDetails' >${MYDATA.Email}</h1>
+            <h1 id='MyEmail' class='MyDetails' >${MYDATA.Email}</h1>
 
         </div>
 

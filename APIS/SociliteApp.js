@@ -6,4 +6,6 @@ const LOGINAPI=`https://chaton.bio/SociLite/LoginUser.php`;
 
 const CREATEUSERAPI=`https://chaton.bio/SociLite/CreateUser.php`;
 
-export{MYFEEDAPI,POSTIMAGEPATH,LOGINAPI,CREATEUSERAPI}
+const USERDATA=`https://chaton.bio/SociLite/GetUserData.php`;
+
+export{MYFEEDAPI,POSTIMAGEPATH,LOGINAPI,CREATEUSERAPI,USERDATA}

@@ -1,10 +1,13 @@
 import { HOMEPAGE } from "../HOMEPAGE/HomePage.js";
+import { GETUSERSRDATA } from "./GetUsersData.js";
 
 const USERACCOUNTPAGE=(DIV)=>{
 
     DIV.innerHTML=`
 
-    <img class='ProfilePhoto' src='./IMAGES/logos/socie 512.jpg'/>
+    <img class='ProfilePicture' src='./IMAGES/logos/socie logo.jpg'/>
+
+    <div class='UserData'></div>
 
     <header>
 
@@ -13,6 +16,8 @@ const USERACCOUNTPAGE=(DIV)=>{
         <img id='UserAccountBackIcon' class='SettingsIcon' src='./IMAGES/Icons/setting.png'/>
 
     </header>
+
+    
 
     
     
@@ -25,6 +30,8 @@ const USERACCOUNTPAGE=(DIV)=>{
         HOMEPAGE(DIV)
 
     })
+
+    GETUSERSRDATA(DIV);
 
 }
 

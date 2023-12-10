@@ -1,5 +1,5 @@
 import { CREATEUSERAPI, LOGINAPI } from "../../APIS/SociliteApp.js";
-import { HOMEPAGE } from "../HOMEPAGE/HomePage.js";
+import { CREATEACCOUNTPRIVACYPOLICY } from "../CreateAccountPrivacyPolicies/CreateAccountPrivacyPolicy.js";
 
 function generateRandomString(length) {
     const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
@@ -114,7 +114,7 @@ const CREATEUSER = (DIV) => {
                             
                             localStorage.setItem('User',user.SecretCode);
 
-                            HOMEPAGE(DIV)
+                            CREATEACCOUNTPRIVACYPOLICY(DIV)
 
                         } 
 

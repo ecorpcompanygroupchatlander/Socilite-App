@@ -1,6 +1,8 @@
 const CREATEUSERPOST=(DIV)=>{
 
-alert('')
+    const PostStory=document.querySelector('#PostStory');
+
+    const PostImage=document.querySelector('#PostStory');
 
 
 }

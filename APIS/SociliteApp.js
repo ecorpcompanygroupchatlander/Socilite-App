@@ -1,6 +1,6 @@
 const MYFEEDAPI=`https://script.googleusercontent.com/macros/echo?user_content_key=B9fqEvmtnCCHwDCnZ-5sSu71toz4MzoTxrf315wtfIEHuxNM5Cu_h2HZT9xGl4tilFh7FjC1IIzjdkEWCGntE5bEmMeoK2vDm5_BxDlH2jW0nuo2oDemN9CCS2h10ox_1xSncGQajx_ryfhECjZEnOAkcG97VzAwakN9YYUAFyQRPRZikRmdTl4f6LGzID4_cBMsR6pkaEiX2dzEcjXvsk_3lB6gifItW4UIJWMKj6fcYTTmUjnljQ&lib=Mr4rCsHrrWb3rNW8Tj5K_BsSoMAbC-O1l`;
 
-const POSTIMAGEPATH=`https://e-corpcompanygroupmovieslander.github.io/MovieLander/MoviesPosters/`;
+const POSTIMAGEPATH=`https://chaton.bio/SociLite/Content/`;
 
 const LOGINAPI=`https://script.googleusercontent.com/macros/echo?user_content_key=ZL3_AHr6-iHgPx9oSFPfVFPt5XIZmIF_danS8YKTsqZMIy2AZ9DumFsm0qt9FfHZNDIFSNlwC47w1aP74Qpx553yxD-Tcb8nm5_BxDlH2jW0nuo2oDemN9CCS2h10ox_1xSncGQajx_ryfhECjZEnLw0uDoSfSUv_8eHcYAfGQmv2bTc6rZIKH0lH8lCqcusHY3ZS91nOSewYxxtewAQ9nLL_FYMjtEDH3AtyZtxt2dqQhvrZJlV79z9Jw9Md8uu&lib=MLLGIZyCnM9bQ5rNPRrmB1LCC-xC2AC3z`;
 
@@ -8,6 +8,8 @@ const CREATEUSERAPI=`https://script.google.com/macros/s/AKfycby9bsQFDUJ8PFi3lvW9
 
 const USERDATA=`https://script.googleusercontent.com/macros/echo?user_content_key=ZL3_AHr6-iHgPx9oSFPfVFPt5XIZmIF_danS8YKTsqZMIy2AZ9DumFsm0qt9FfHZNDIFSNlwC47w1aP74Qpx553yxD-Tcb8nm5_BxDlH2jW0nuo2oDemN9CCS2h10ox_1xSncGQajx_ryfhECjZEnLw0uDoSfSUv_8eHcYAfGQmv2bTc6rZIKH0lH8lCqcusHY3ZS91nOSewYxxtewAQ9nLL_FYMjtEDH3AtyZtxt2dqQhvrZJlV79z9Jw9Md8uu&lib=MLLGIZyCnM9bQ5rNPRrmB1LCC-xC2AC3z`;
 
-const PROFILEPHOTO=`https://chaton.bio/SociLite/UploadProfilePhoto.php`;
+const PHOTOUPLOAD=`https://chaton.bio/SociLite/UploadImages.php`;
 
-export{MYFEEDAPI,POSTIMAGEPATH,LOGINAPI,CREATEUSERAPI,USERDATA,PROFILEPHOTO}
+const UPDATEPROFILEIMAGE=`https://script.google.com/macros/s/AKfycbzzRrhy045gaBzJoo_XZRF1xgHcW5GIQoC82Mg6LdanW68SD9fqxaBCgh1ci9BqGMPGVg/exec`;
+
+export{MYFEEDAPI,POSTIMAGEPATH,LOGINAPI,CREATEUSERAPI,USERDATA,PHOTOUPLOAD,UPDATEPROFILEIMAGE}

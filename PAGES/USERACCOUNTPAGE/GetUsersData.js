@@ -1,4 +1,4 @@
-import { USERDATA } from "../../APIS/SociliteApp.js";
+import { POSTIMAGEPATH, USERDATA } from "../../APIS/SociliteApp.js";
 import { LOGINPAGE } from "../LOGINPAGE/LoginPage.js";
 
 const GETUSERSRDATA=(DIV)=>{
@@ -6,6 +6,14 @@ const GETUSERSRDATA=(DIV)=>{
     const UserData=document.querySelector('.UserData');
 
     const ProfileUserName=document.querySelector('.ProfileUserName');
+
+    const ProfileImage=document.querySelector('#ProfileImage');
+
+    ProfileUserName.innerHTML=`
+    
+    <img class='LoadingIcon' src='./IMAGES/Icons/loading.png'/>
+    
+    `;
 
     fetch(USERDATA)
 
@@ -18,6 +26,8 @@ const GETUSERSRDATA=(DIV)=>{
         if (user) {
             
             ProfileUserName.innerHTML=user.UserName;
+
+            ProfileImage.src=POSTIMAGEPATH+user.ProfileImage;
 
         } else {
             

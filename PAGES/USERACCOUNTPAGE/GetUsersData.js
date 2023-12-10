@@ -9,6 +9,8 @@ const GETUSERSRDATA=(DIV)=>{
 
     const ProfileImage=document.querySelector('#ProfileImage');
 
+    const CoverPhoto=document.querySelector('#CoverPhoto');
+
     ProfileUserName.innerHTML=`
     
     <img class='LoadingIcon' src='./IMAGES/Icons/loading.png'/>
@@ -27,7 +29,9 @@ const GETUSERSRDATA=(DIV)=>{
             
             ProfileUserName.innerHTML=user.UserName;
 
-            ProfileImage.src=POSTIMAGEPATH+user.ProfileImage;
+            ProfileImage.src=POSTIMAGEPATH+user.ProfilePhoto;
+
+            CoverPhoto.src=POSTIMAGEPATH+user.ProfilePhoto;
 
         } else {
             

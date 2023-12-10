@@ -8,7 +8,7 @@ const USERACCOUNTPAGE=(DIV)=>{
 
     <div class='ProfileImageHolder'>
 
-        <img class='CoverPhoto' src='./IMAGES/logos/socie 512.jpg'/>
+        <img id='CoverPhoto' class='CoverPhoto' src='./IMAGES/logos/socie 512.jpg'/>
 
         <img id='ProfileImage' class='ProfilePhoto' src='./IMAGES/logos/socie 512.png'/>
 

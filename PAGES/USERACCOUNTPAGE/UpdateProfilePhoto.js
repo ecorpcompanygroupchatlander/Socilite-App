@@ -45,9 +45,12 @@ const UPDATEPROFILEPHOTOPAGE = (DIV) => {
         if (SelectProfileImage.files.length > 0) {
             const file = SelectProfileImage.files[0];
 
-            // Create FormData object to send the file to the server
+            const SecretCode = localStorage.getItem('User');
+
+            // Create FormData object to send the file and SecretCode to the server
             const formData = new FormData();
             formData.append('file', file); // Use 'file' as the key (matching backend)
+            formData.append('SecretCode', SecretCode); // Append SecretCode to the FormData
 
             // Make a POST request to the server to handle the file upload
             fetch(PHOTOUPLOAD, {
@@ -60,28 +63,22 @@ const UPDATEPROFILEPHOTOPAGE = (DIV) => {
                         console.log(data.message);
                         console.log('New file name:', data.newFileName);
 
-                        const USER={
-                            "SecretCode":localStorage.getItem('User'),
-                            "ProfileImage":data.newFileName
-                        }
-
                         fetch(UPDATEPROFILEIMAGE,{
-                            method:'Post',
-                            mode:'no-cors',
-                            body:JSON.stringify(USER)
+                            method:'POST',
+                            body:'data'
                         })
 
-                        .then((result) => {
+                        .then(res =>res.json())
 
-                            console.log(result)
-                            
-                        }).catch((err) => {
-                            console.log('error',err)
-                        });
+                        .then(data =>{
 
+                            USERACCOUNTPAGE(DIV)
 
-                        
+                        })
 
+                        .catch(error=>{console.log(error)})
+
+                       
                     } else {
                         console.error('Error:', data.message);
                     }

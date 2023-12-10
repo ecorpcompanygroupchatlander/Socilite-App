@@ -86,7 +86,8 @@ const CREATEUSER = (DIV) => {
                     "Telephone": TELEPHONE.value,
                     "Location": LOCATION.value,
                     "CreatedOn": new Date(),
-                    "SecretCode":secretCode
+                    "SecretCode":secretCode,
+                    "ProfilePhoto":""
                 };
 
                 fetch(CREATEUSERAPI, {
@@ -98,9 +99,9 @@ const CREATEUSER = (DIV) => {
                     body: JSON.stringify(USERDATA),
                 })
 
-                .then(res => res.text())
-
                 .then((result) => {
+
+                    console.log(result)
 
                     fetch(LOGINAPI)
 

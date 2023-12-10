@@ -4,12 +4,12 @@ const POSTIMAGEPATH=`https://chaton.bio/SociLite/Content/`;
 
 const LOGINAPI=`https://script.googleusercontent.com/macros/echo?user_content_key=ZL3_AHr6-iHgPx9oSFPfVFPt5XIZmIF_danS8YKTsqZMIy2AZ9DumFsm0qt9FfHZNDIFSNlwC47w1aP74Qpx553yxD-Tcb8nm5_BxDlH2jW0nuo2oDemN9CCS2h10ox_1xSncGQajx_ryfhECjZEnLw0uDoSfSUv_8eHcYAfGQmv2bTc6rZIKH0lH8lCqcusHY3ZS91nOSewYxxtewAQ9nLL_FYMjtEDH3AtyZtxt2dqQhvrZJlV79z9Jw9Md8uu&lib=MLLGIZyCnM9bQ5rNPRrmB1LCC-xC2AC3z`;
 
-const CREATEUSERAPI=`https://script.google.com/macros/s/AKfycby9bsQFDUJ8PFi3lvW9u5UdKDvr46_pCc7RguRFQsTmHhxfkQoMaTITMmbjo-gP2IETeA/exec`;
+const CREATEUSERAPI=`https://chaton.bio/SociLite/CreateUser.php`;
 
 const USERDATA=`https://script.googleusercontent.com/macros/echo?user_content_key=ZL3_AHr6-iHgPx9oSFPfVFPt5XIZmIF_danS8YKTsqZMIy2AZ9DumFsm0qt9FfHZNDIFSNlwC47w1aP74Qpx553yxD-Tcb8nm5_BxDlH2jW0nuo2oDemN9CCS2h10ox_1xSncGQajx_ryfhECjZEnLw0uDoSfSUv_8eHcYAfGQmv2bTc6rZIKH0lH8lCqcusHY3ZS91nOSewYxxtewAQ9nLL_FYMjtEDH3AtyZtxt2dqQhvrZJlV79z9Jw9Md8uu&lib=MLLGIZyCnM9bQ5rNPRrmB1LCC-xC2AC3z`;
 
 const PHOTOUPLOAD=`https://chaton.bio/SociLite/UploadImages.php`;
 
-const UPDATEPROFILEIMAGE=`https://script.google.com/macros/s/AKfycbzzRrhy045gaBzJoo_XZRF1xgHcW5GIQoC82Mg6LdanW68SD9fqxaBCgh1ci9BqGMPGVg/exec`;
+const UPDATEPROFILEIMAGE=`https://chaton.bio/SociLite/UpdateUserData.php`;
 
 export{MYFEEDAPI,POSTIMAGEPATH,LOGINAPI,CREATEUSERAPI,USERDATA,PHOTOUPLOAD,UPDATEPROFILEIMAGE}
